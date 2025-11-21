@@ -61,24 +61,29 @@ Conclusão: O motor de ETL está operacional 4 meses antes do previsto no cronog
 ---
 ## Arquitetura do projeto
 
-etl/
-│── extract.py        # Download das tabelas diretamente do USP Digital
-│── transform.py      # Padronização de colunas e filtragem de São Carlos
-│── load.py           # Salvamento dos resultados em CSV
-└── pipeline.py       # Orquestração completa do processo
-
-data/
-│── raw/              # (opcional) tabelas brutas, caso queira armazenar
-└── processed/        # CSVs finais prontos para análise
-
-notebooks/
-└── usp_sao_carlos_data_pipeline.ipynb   # Notebook original usado no protótipo
-
-docs/
-└── PUB-Projeto.pdf   # Documento oficial com o cronograma e descrição do projeto
-
-requirements.txt
-README.md
+usp_sao_carlos_data_pipeline/
+│
+├── etl/
+│ ├── extract.py # Download das tabelas diretamente do USP Digital
+│ ├── transform.py # Padronização de colunas e filtragem de São Carlos
+│ ├── load.py # Salvamento dos resultados em CSV
+│ └── pipeline.py # Orquestração completa do processo
+│
+├── data/
+│ ├── raw/ # (opcional) tabelas brutas, caso queira armazenar
+│ └── processed/ # CSVs finais prontos para análise
+│
+├── notebooks/
+│ └── usp_sao_carlos_data_pipeline.ipynb # Notebook original usado no protótipo
+│
+├── docs/
+│ └── PUB-Projeto.pdf # Documento oficial com o cronograma e descrição do projeto
+│
+├── scripts/
+│ └── export_notebook_to_py.py # Conversão do notebook para .py
+│
+├── requirements.txt
+└── README.md
 
 ## Sobre a pasta `data/raw`
 
